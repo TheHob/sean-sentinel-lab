@@ -1,5 +1,5 @@
-resource "vault_auth_backend" “swalker_aws" {
+resource "vault_auth_backend" "swalker_aws" {
   type = "aws"
-  path = “swalker_aws"
+  path = "swalker_aws"
 }
 
