@@ -26,6 +26,8 @@ auth_backend_allowed = rule {
     }
 }
 
+print(auth_backends)
+
 main = rule {
   (auth_backend_allowed) else true
 }
