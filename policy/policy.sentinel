@@ -3,18 +3,17 @@ import "tfplan"
 get_auth_backends = func() {
   backends = []
   for tfplan.module_paths as path {
-    backends +=
-      values(tfplan.module(path).resources.vault_auth_backend) else []
+    backends += values(tfplan.module(path).resources.vault_auth_backend) else []
   }
   return backends
 }
 auth_backends = get_auth_backends()
 
 allowed_backends = [
-  “azure”,
-  “github”,
-  “k8s”,
-  “approle”,
+  "azure",
+  "github",
+  "k8s",
+  "approle",
 ]
 
 auth_backend_allowed = rule {
