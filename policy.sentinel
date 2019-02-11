@@ -7,7 +7,7 @@ get_auth_backends = func() {
       values(tfplan.module(path).resources.vault_auth_backend)
       else []
   }
-  return backend
+  return backends
 }
 auth_backends = get_auth_backends()
 
